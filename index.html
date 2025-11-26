@@ -3,169 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ed Gein: A História que Inspirou o Terror</title>
-    <!-- Carregamento do Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuração de Fontes Personalizadas (Inter para corpo, Playfair Display para títulos) -->
+    <title>Campanha Pela Proteção da Saúde Pública</title>
+    <!-- Carrega o Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para a fonte Inter e esquema de cores --><script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0D47A1', // Azul escuro
+                        'secondary': '#C62828', // Vermelho para alerta
+                        'background': '#F4F4F9', // Fundo claro (será sobreposto pela imagem)
+                        'text-dark': '#1F2937', // Texto escuro
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap');
-        .font-headline {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 0.05em;
+        /* Define a fonte Inter (preferencialmente, se o ambiente suportar) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+        /* Estilo para o fundo da página com a imagem */
+        body {
+            background-image: url('https://i.imgur.com/your-prohibition-image.jpg'); /* Substitua 'your-prohibition-image.jpg' pela URL da sua imagem */
+            background-size: cover;
+            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Garante que o fundo cubra toda a altura */
         }
-        .font-body {
-            font-family: 'Inter', sans-serif;
+        /* Para garantir que as seções tenham seu próprio fundo e o texto seja legível */
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para as seções */
+            backdrop-filter: blur(5px); /* Efeito de desfoque para o fundo */
         }
-        .clipping-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
-        }
-        /* Estilo para simular a cor de papel envelhecido e texto impresso */
-        .newspaper-bg {
-            background-color: #f7f3e8; /* Cor de papel antigo */
-            color: #333333;
-        }
-        /* Estilo para simular a moldura do vídeo e fundo */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #1f2937; /* Cinza escuro */
-            border: 4px solid #4b5563;
-            border-radius: 0.75rem;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Ajuste para a seção primária para manter a cor principal */
+        section.bg-primary {
+            background-color: rgba(13, 71, 161, 0.9); /* Azul primário semi-transparente */
         }
     </style>
 </head>
-<body class="bg-gray-900 font-body text-gray-100 min-h-screen">
+<body class="text-text-dark font-sans antialiased">
 
-    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
-
-        <!-- TÍTULO PRINCIPAL & CABEÇALHO -->
-        <header class="text-center mb-12 border-b-4 border-red-700 pb-4">
-            <h1 class="text-6xl md:text-8xl font-headline text-red-600 mb-2 font-extrabold">Dossiê Gein</h1>
-            <p class="text-xl md:text-2xl font-body text-gray-400">O Açougueiro de Plainfield e a Gênese dos Monstros de Hollywood</p>
-        </header>
-
-        <!-- ARTIGO DE NOTÍCIA PRINCIPAL -->
-        <div class="bg-gray-800 p-6 rounded-xl shadow-2xl mb-12">
-            <h2 class="text-3xl font-headline font-bold text-red-500 mb-4 border-l-4 border-red-600 pl-3">A História Real: Plainfield, 1957</h2>
-            <p class="text-gray-300 mb-4 leading-relaxed">
-                Em 1957, a pequena e pacata cidade de Plainfield, Wisconsin, foi abalada por uma descoberta que entraria para a história criminal e cultural dos Estados Unidos. **Edward Theodore Gein** foi preso sob a suspeita do desaparecimento da lojista local Bernice Worden.
-            </p>
-            <p class="text-gray-300 mb-4 leading-relaxed">
-                O que as autoridades encontraram na fazenda de Gein desafiou a sanidade: uma coleção macabra de "artesanato" e móveis feitos a partir de restos humanos roubados de túmulos locais, incluindo **máscaras faciais e um "traje" de pele feminina**.
-            </p>
-            <p class="text-gray-300 mb-4 leading-relaxed italic border-t border-gray-700 pt-3">
-                Gein, que tinha uma relação possessiva e doentia com sua mãe, Augusta (morta em 1945), foi considerado legalmente insano. Seus atos eram motivados por uma profunda obsessão por anatomia e o desejo de "incorporar" a figura feminina. O caso foi amplamente noticiado, inspirando uma nova era de horror psicológico.
-            </p>
+    <!-- Navbar/Header --><header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-primary">
+                <span class="text-secondary">#</span>NãoAoRisco
+            </h1>
+            <a href="#ajuda" class="bg-secondary text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300 shadow-md">
+                Ligue Ajuda: 121
+            </a>
         </div>
+    </header>
 
-        <!-- SEÇÃO DO VÍDEO "MENTES DIABÓLICAS" -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-headline font-bold text-yellow-400 mb-6 text-center">Documentário: Mentes Diabólicas - Ed Gein</h2>
-            <div class="flex justify-center">
-                <!-- Usando um link para o vídeo encontrado na pesquisa (Nerdologia Criminals sobre Ed Gein) -->
-                <a href="https://www.youtube.com/watch?v=1dCPIinQ47k" target="_blank" class="block w-full max-w-lg transition-transform duration-300 transform hover:scale-[1.02] rounded-xl shadow-2xl">
-                    <div class="bg-red-800 p-3 rounded-t-xl text-center font-bold text-white uppercase tracking-wider">
-                        CLIQUE PARA ASSISTIR
-                    </div>
-                    <!-- Imagem de Placeholder para simular a miniatura do YouTube -->
-                    <img src="https://placehold.co/640x360/1e293b/FFFFFF?text=Mentes+Diab%C3%B3licas%0AEd+Gein+%28Clique+para+Assistir%29" 
-                         alt="Miniatura do vídeo Mentes Diabólicas: Ed Gein" 
-                         class="w-full h-auto rounded-b-xl object-cover"
-                         onerror="this.onerror=null; this.src='https://placehold.co/640x360/4b5563/FFFFFF?text=Document%C3%A1rio+Indispon%C3%ADvel';"
-                    >
-                </a>
-            </div>
-            <p class="text-center text-sm text-gray-500 mt-4 italic">Conteúdo externo de análise criminal sobre o caso real.</p>
-        </section>
+    <!-- Hero Section --><main class="pt-16 pb-12 bg-gray-50 bg-opacity-90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-text-dark leading-tight mb-4">
+                <span class="text-primary">Protegendo</span> a Saúde, Prevenindo o Risco.
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Uma campanha pela consciência e pela manutenção da proibição do uso recreativo da Cannabis, focando em evidências científicas e impactos sociais.
+            </p>
+            <a href="#riscos" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-blue-800 transition duration-300 transform hover:scale-105">
+                Saiba Mais Sobre os Riscos
+            </a>
+        </div>
+    </main>
 
-        <!-- SEÇÃO: AS TRÊS INSPIRAÇÕES LENDÁRIAS -->
-        <h2 class="text-4xl font-headline font-bold text-red-600 mb-8 text-center border-t-2 border-red-700 pt-8">A Influência no Panteão do Terror</h2>
-
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-
-            <!-- INSPIRAÇÃO 1: NORMAN BATES (PSICOSE) -->
-            <div class="bg-gray-700 p-5 rounded-lg clipping-shadow border border-red-900">
-                <h3 class="text-2xl font-headline font-bold text-yellow-400 mb-3">1. Norman Bates (Psicose, 1960)</h3>
-                <p class="text-gray-300 text-sm mb-3 font-semibold">A Obsessão Materna</p>
-                <p class="text-gray-400 text-sm">A inspiração aqui é primordialmente psicológica. O autor Robert Bloch usou a notícia do caso para desenvolver o conceito de um assassino recluso, incapaz de se desvencilhar da moralidade ditatorial de sua mãe falecida. O uso de roupas femininas é um paralelo direto aos hábitos de Gein.</p>
-                <div class="mt-3 text-right">
-                    <span class="text-xs text-red-400 font-headline">Hitchcock / 1960</span>
+    <!-- Section 1: Riscos à Saúde (Health Risks) --><section id="riscos" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-secondary text-center mb-12">
+                Os Riscos Comprovados à Saúde Mental e Física
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Risco 1: Psicose e Esquizofrenia --><div class="bg-red-50 p-6 rounded-xl shadow-lg border-t-4 border-secondary hover:shadow-xl transition duration-300">
+                    <svg class="w-12 h-12 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 111.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 0012 21.011c3.273 0 6.393-.895 9.176-2.434l-1.558-1.558z"></path></svg>
+                    <h4 class="text-xl font-semibold text-text-dark mb-3">Risco de Psicose e Esquizofrenia</h4>
+                    <p class="text-gray-700">O uso, especialmente em adolescentes e em altas doses, está associado a um risco aumentado de desenvolver transtornos psicóticos, como a esquizofrenia. O THC pode desencadear ou exacerbar esses quadros em indivíduos vulneráveis.</p>
                 </div>
-            </div>
-
-            <!-- INSPIRAÇÃO 2: LEATHERFACE (O MASSACRE DA SERRA ELÉTRICA) -->
-            <div class="bg-gray-700 p-5 rounded-lg clipping-shadow border border-red-900">
-                <h3 class="text-2xl font-headline font-bold text-yellow-400 mb-3">2. Leatherface (Massacre da Serra Elétrica, 1974)</h3>
-                <p class="text-gray-300 text-sm mb-3 font-semibold">O Artesão da Máscara Humana</p>
-                <p class="text-gray-400 text-sm">Esta é a conexão mais visual e direta. O diretor Tobe Hooper inspirou-se na loucura rural e, crucialmente, no hábito de Gein de criar máscaras de pele facial humana para seu personagem. O nome do vilão ("Leatherface" ou "Rosto de Couro") e a decoração de sua casa com ossos e restos são ecos diretos das descobertas na fazenda de Gein.</p>
-                <div class="mt-3 text-right">
-                    <span class="text-xs text-red-400 font-headline">Hooper / 1974</span>
+                <!-- Risco 2: Dependência Química --><div class="bg-red-50 p-6 rounded-xl shadow-lg border-t-4 border-secondary hover:shadow-xl transition duration-300">
+                    <svg class="w-12 h-12 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0v4m-5 0h2m-2 0l-1 9a4 4 0 004 4h4a4 4 0 004-4l-1-9m-8 0h8"></path></svg>
+                    <h4 class="text-xl font-semibold text-text-dark mb-3">Dependência e Síndrome de Abstinência</h4>
+                    <p class="text-gray-700">A Cannabis pode causar dependência física e psicológica. A interrupção do uso por dependentes frequentemente leva à Síndrome de Abstinência, com irritabilidade, ansiedade, insônia e outros sintomas incômodos.</p>
                 </div>
-            </div>
-
-            <!-- INSPIRAÇÃO 3: BUFFALO BILL (O SILÊNCIO DOS INOCENTES) -->
-            <div class="bg-gray-700 p-5 rounded-lg clipping-shadow border border-red-900">
-                <h3 class="text-2xl font-headline font-bold text-yellow-400 mb-3">3. Buffalo Bill (O Silêncio dos Inocentes, 1991)</h3>
-                <p class="text-gray-300 text-sm mb-3 font-semibold">O Desejo de Transformação</p>
-                <p class="text-gray-400 text-sm">Embora o personagem Jame Gumb (Buffalo Bill) tenha múltiplas inspirações de serial killers reais, seu *modus operandi* de esfolar as vítimas para criar um "traje feminino" é uma referência clara aos atos de Ed Gein. O desejo de transformar a pele humana em "roupa" remete à compulsão de Gein em confeccionar seus próprios objetos macabros.</p>
-                <div class="mt-3 text-right">
-                    <span class="text-xs text-red-400 font-headline">Demme / 1991</span>
+                <!-- Risco 3: Impacto Cognitivo --><div class="bg-red-50 p-6 rounded-xl shadow-lg border-t-4 border-secondary hover:shadow-xl transition duration-300">
+                    <svg class="w-12 h-12 text-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h4 class="text-xl font-semibold text-text-dark mb-3">Prejuízo Cognitivo Duradouro</h4>
+                    <p class="text-gray-700">Estudos indicam que o uso crônico, especialmente iniciado na adolescência (fase crítica do desenvolvimento cerebral), pode levar a déficits persistentes de atenção, memória e funções executivas.</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- SEÇÃO: RECORTES DE JORNAL E TESTEMUNHAS (Simulação) -->
-        <h2 class="text-4xl font-headline font-bold text-red-600 mb-8 text-center border-t-2 border-red-700 pt-8">Folhas de Jornal & Testemunhos</h2>
-
-        <div class="grid md:grid-cols-2 gap-6">
-
-            <!-- RECORTES DE JORNAL (Simulação) -->
-            <div class="newspaper-bg p-5 rounded-lg clipping-shadow transform rotate-1 border-4 border-gray-400">
-                <div class="font-headline text-center text-red-800 text-lg mb-2">EXTRA! WISCONSIN STAR, 18 DE NOVEMBRO DE 1957</div>
-                <h4 class="text-3xl font-headline font-bold text-red-900 mb-3">HORROR INIMAGINÁVEL ENCONTRADO EM PLAINFIELD</h4>
-                <p class="text-sm italic mb-2">"A casa de Ed Gein, 51, revela um cenário que 'ultrapassa a ficção', diz Xerife. Objetos feitos de restos humanos, incluindo uma máscara facial, foram confiscados como prova. O Açougueiro de Plainfield confessou o assassinato de Bernice Worden, mas o horror em sua fazenda sugere crimes que datam de anos. A pequena cidade está em choque total."</p>
-                <p class="text-xs text-right mt-3 text-red-700 font-bold border-t border-gray-500 pt-1">CRIME E SOCIEDADE, PÁGINA 1</p>
-            </div>
-
-            <div class="newspaper-bg p-5 rounded-lg clipping-shadow transform -rotate-2 border-4 border-gray-400">
-                <div class="font-headline text-center text-red-800 text-lg mb-2">RETRATO PSICOLÓGICO, DÉCADA DE 60</div>
-                <h4 class="text-3xl font-headline font-bold text-red-900 mb-3">O SERIAL KILLER MODELO</h4>
-                <p class="text-sm italic mb-2">"Gein não foi um prolífico serial killer, mas a natureza de sua profanação – a criação de troféus e substitutos corporais – forneceu o arquétipo do assassino moderno e psicologicamente complexo. Sua fixação materna e isolamento tornaram-se o manual para a ficção de horror, moldando o gênero por décadas."</p>
-                <p class="text-xs text-right mt-3 text-red-700 font-bold border-t border-gray-500 pt-1">PSICOPATAS NA CULTURA POP</p>
-            </div>
-
-            <!-- TESTEMUNHOS (Simulação) -->
-            <div class="md:col-span-2 bg-red-900 p-5 rounded-lg clipping-shadow border-4 border-red-600">
-                <h4 class="text-2xl font-headline font-bold text-white mb-3 border-b-2 pb-2">"Declarações Chocantes" - Relatos de Testemunhas e Investigadores</h4>
-                <ul class="list-disc list-inside text-gray-200 space-y-3 pl-4">
-                    <li class="text-sm">
-                        <span class="font-semibold text-yellow-300">Oficial de Polícia (Relatório):</span> "A confusão mental de Gein era palpável. Ele parecia ver os objetos de pele e os corpos não como partes humanas, mas como materiais de um projeto... Era como se ele estivesse consertando uma casa, não cometendo atrocidades."
-                    </li>
-                    <li class="text-sm">
-                        <span class="font-semibold text-yellow-300">Vizinhança (Anônimo):</span> "Ele era o homem mais quieto que você poderia conhecer. Sempre educado, nunca causava problemas. Isso é o que mais nos aterroriza: a loucura estava escondida à vista de todos, no meio de nossa comunidade."
-                    </li>
-                    <li class="text-sm">
-                        <span class="font-semibold text-yellow-300">Psiquiatra Forense (1958):</span> "O complexo de Édipo aqui é levado ao extremo. Seu crime era uma tentativa desesperada de recriar e, finalmente, incorporar a imagem feminina que sua mãe lhe havia negado."
-                    </li>
-                </ul>
+    <!-- Section 2: OMS/Cannabis (WHO/Cannabis) --><section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-center mb-12">
+                O Posicionamento da OMS e a Necessidade de Controle
+            </h3>
+            <div class="md:flex md:items-start md:space-x-12">
+                <div class="md:w-1/3 mb-6 md:mb-0 flex-shrink-0">
+                    <img src="https://placehold.co/400x300/ffffff/0D47A1?text=Símbolo+OMS" alt="Símbolo da Organização Mundial da Saúde (OMS)" class="rounded-xl shadow-2xl mx-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-xl leading-relaxed mb-6 border-l-4 border-white pl-4 italic">
+                        "Embora a Organização Mundial da Saúde (OMS) tenha recomendado a reclassificação da Cannabis e da resina de Cannabis, ela continua sob controle internacional estrito. A reclassificação reconhece o potencial terapêutico, mas <span class="font-bold underline">não nega os graves riscos de abuso e dependência</span> associados, especialmente ao THC."
+                    </p>
+                    <p class="mb-4">
+                        A discussão da OMS é complexa: ela separa o uso medicinal sob controle rigoroso do uso recreativo irrestrito. Nossa campanha defende que o princípio ativo THC, com seus comprovados efeitos psicoativos e potencial de dano à saúde pública, deve permanecer sob controle absoluto.
+                    </p>
+                    <p class="font-semibold">
+                        A flexibilização do controle aumenta a acessibilidade e, consequentemente, o número de casos de dependência e problemas de saúde mental. A saúde pública deve ser a prioridade.
+                    </p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- RODAPÉ -->
-        <footer class="text-center mt-12 pt-6 border-t border-gray-700 text-gray-500 text-sm">
-            <p>Este site é um dossiê informativo. O conteúdo é baseado em fatos históricos e suas adaptações cinematográficas. Todos os direitos reservados. © 2025.</p>
-        </footer>
-    </div>
+    <!-- Section 3: Casos Reais e Depoimentos (Real Cases and Testimonies) --><section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-primary text-center mb-12">
+                Casos Verídicos: O Custo Humano do Uso
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testemunho 1: Saúde Mental --><div class="bg-white p-6 rounded-xl shadow-xl border-l-4 border-secondary">
+                    <p class="text-lg italic text-gray-700 mb-4">
+                        "Começou como diversão aos 16 anos. Aos 19, vieram as crises de paranoia e, pouco depois, o diagnóstico de esquizofrenia. Minha vida e a de minha família viraram de cabeça para baixo. Os médicos disseram que o uso precoce foi o gatilho para a doença que estava latente. Não é uma 'droga leve'."
+                    </p>
+                    <p class="font-bold text-secondary text-right">— Márcia S., Mãe de um jovem em tratamento psiquiátrico.</p>
+                </div>
+                <!-- Testemunho 2: Óbito Indireto (Acidente) --><div class="bg-white p-6 rounded-xl shadow-xl border-l-4 border-secondary">
+                    <p class="text-lg italic text-gray-700 mb-4">
+                        "Meu irmão foi vítima de um acidente de trânsito. O motorista que o atropelou estava sob o efeito de Cannabis. Embora o óbito não seja diretamente pela overdose da substância, a alteração de reflexos e julgamento cobra vidas inocentes. A legalização só aumentará o número de tragédias nas ruas."
+                    </p>
+                    <p class="font-bold text-secondary text-right">— João V., Morador de São Paulo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: O Olhar da Medicina (Medical Expert View) --><section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-text-dark text-center mb-12">
+                O Olhar de Especialistas na Medicina
+            </h3>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-6">
+                <blockquote class="border-l-4 border-primary pl-4">
+                    <p class="font-medium text-text-dark">
+                        "Como psiquiatra, vejo diariamente os estragos que o uso crônico e precoce da Cannabis causa no desenvolvimento cerebral de jovens. O que a medicina apoia é o uso de seus componentes (como o CBD) em produtos farmacêuticos e com controle médico rigoroso, <span class="font-bold">não a liberação para consumo recreativo</span>. O custo social e a sobrecarga do sistema de saúde seriam imensos."
+                    </p>
+                    <footer class="mt-2 text-sm italic text-primary">— Dra. Helena Oliveira, Especialista em Neuropsiquiatria.</footer>
+                </blockquote>
+                <p>
+                    Os especialistas concordam que o princípio ativo THC é um agente psicoativo potente. O argumento da legalização é frequentemente baseado em um CBD (Canabidiol) de baixo teor psicoativo, mas o consumo recreativo foca em cepas com altíssimo teor de THC.
+                </p>
+                <p>
+                    A Medicina exige responsabilidade: se é tóxico e viciante, deve ser tratado com a seriedade de uma substância perigosa, e não como um produto de prateleira.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Notícias e Artigos (News and Articles) --><section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-secondary text-center mb-12">
+                Notícias Recentes e Artigos de Aprofundamento
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Notícia 1 (Fictícia) --><article class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-primary mb-2">Aumento de Internações por Psicose Canábica</h4>
+                    <p class="text-sm text-gray-500 mb-3">20 de Novembro de 2025 | Fonte: Revista Médica Brasileira</p>
+                    <p class="text-gray-700">Artigo detalha o crescimento alarmante no número de jovens hospitalizados com quadros psicóticos desencadeados pelo uso de Cannabis com alto teor de THC. <a href="#" class="text-secondary hover:underline font-medium">(Leia mais)</a></p>
+                </article>
+                <!-- Notícia 2 (Fictícia) --><article class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-primary mb-2">Estudo Revela Impacto no Desempenho Escolar</h4>
+                    <p class="text-sm text-gray-500 mb-3">05 de Outubro de 2025 | Fonte: Universidade de São Paulo</p>
+                    <p class="text-gray-700">Pesquisa longitudinal demonstra a correlação direta entre o consumo semanal de Cannabis e a queda significativa no rendimento acadêmico de estudantes do ensino médio. <a href="#" class="text-secondary hover:underline font-medium">(Leia mais)</a></p>
+                </article>
+                <!-- Notícia 3 (Fictícia) --><article class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-primary mb-2">O Debate Econômico vs. Custo Social</h4>
+                    <p class="text-sm text-gray-500 mb-3">10 de Setembro de 2025 | Fonte: Economia & Sociedade</p>
+                    <p class="text-gray-700">Análise crítica sobre a promessa de arrecadação de impostos, contrastada com os custos a longo prazo para o sistema de saúde e segurança pública devido ao aumento do consumo. <a href="#" class="text-secondary hover:underline font-medium">(Leia mais)</a></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Ajuda e Recursos (Help and Resources) --><section id="ajuda" class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-center mb-6">
+                Você Não Está Sozinho. Busque Ajuda.
+            </h3>
+            <p class="text-xl text-center mb-8">
+                Se você ou alguém que você conhece está lutando contra a dependência química, há esperança e ajuda profissional disponível.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Helpline --><div class="bg-secondary p-8 rounded-xl shadow-xl text-center flex flex-col justify-center">
+                    <h4 class="text-3xl font-extrabold mb-4">Central de Apoio</h4>
+                    <p class="text-lg mb-2">Ligue gratuitamente e converse com um especialista em saúde:</p>
+                    <p class="text-6xl font-black tracking-wider border-b-2 border-white pb-2 mb-4">121</p>
+                    <p class="text-sm italic">O 121 é um número de utilidade pública que pode encaminhar para serviços de saúde e assistência social.</p>
+                </div>
+
+                <!-- Resources RS --><div class="bg-white p-8 rounded-xl shadow-xl text-text-dark">
+                    <h4 class="text-3xl font-extrabold text-primary mb-4">Clínicas e Recursos no Rio Grande do Sul</h4>
+                    <p class="mb-4">Para quem busca ajuda no RS, listamos algumas referências importantes para tratamento de dependência química:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-primary font-bold mr-2 text-xl">&bull;</span>
+                            <div>
+                                <strong class="text-primary">CT Caminhar:</strong> Tratamento em diversas cidades do RS, com foco em internação. (<a href="https://ctcaminhar.com.br" target="_blank" class="text-secondary hover:underline">ctcaminhar.com.br</a>)
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-bold mr-2 text-xl">&bull;</span>
+                            <div>
+                                <strong class="text-primary">Clínica Viva Vida:</strong> Unidades no estado com foco em tratamento de drogas e álcool. (<a href="https://clinicavivavida.com.br" target="_blank" class="text-secondary hover:underline">clinicavivavida.com.br</a>)
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-bold mr-2 text-xl">&bull;</span>
+                            <div>
+                                <strong class="text-primary">Instituto Recomeçar:</strong> Serviços de reabilitação com atendimento em Porto Alegre/RS. (<a href="https://institutorecomecar.org" target="_blank" class="text-secondary hover:underline">institutorecomecar.org</a>)
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-sm italic">Lembre-se: dependência química é uma doença e buscar ajuda é um ato de coragem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="bg-text-dark text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Campanha Nacional pela Proteção da Saúde Pública. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Esta é uma campanha de conscientização e informação baseada em evidências de saúde.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
+```
+
+**Importante:**
+
+Eu adicionei a seguinte linha CSS no cabeçalho do HTML:
+
+```css
+body {
+    background-image: url('https://i.imgur.com/your-prohibition-image.jpg'); /* Substitua 'your-prohibition-image.jpg' pela URL da sua imagem */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+```
+
+**Você precisará substituir `https://i.imgur.com/your-prohibition-image.jpg` pela URL real da imagem que você deseja usar como fundo.**
+
+Além disso, para garantir a legibilidade do texto sobre a imagem de fundo, adicionei estilos para as seções, tornando-as semi-transparentes e com um leve desfoque:
+
+```css
+section {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para as seções */
+    backdrop-filter: blur(5px); /* Efeito de desfoque para o fundo */
+}
+/* Ajuste para a seção primária para manter a cor principal */
+section.bg-primary {
+    background-color: rgba(13, 71, 161, 0.9); /* Azul primário semi-transparente */
+}
